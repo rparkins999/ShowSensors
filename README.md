@@ -13,7 +13,7 @@ The output on the screen looks like this:-
      alt="Screenshot"
      height=600em>
 
-## Signing and saving settings
+## Signing
 
 Newer versions of Android do not allow you to install unsigned applications. The `.apk` file in the git release is signed (with my signing key). Naturally I am not willing to publish my signing key, so if you build your own version you will need to to sign it with your own signing key. The `app/build.gradle` file expects a `keystore.properties` file in the `Keys` subdirectory of the parent directory of project root directory, which you will need to fill with the details of your own signing key. You can find how to create it [here](https://developer.android.com/studio/publish/app-signing.html).
 
