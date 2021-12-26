@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+}
+
+def deletefile =
+        "build/intermediates/incremental/mergeReleaseResources/merger.xml"
+def keystorePropertiesFile = rootProject.file("../Keys/keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdk 31
+
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    buildTypes {
+        debug {
+            delete(deletefile)
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            resValue("string", 'build_time', "${(new Date()).toString()}")
+            signingConfig signingConfigs.config
+        }
+        release {
+            delete(deletefile)
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            resValue("string", 'build_time', "${(new Date()).toString()}")
+            signingConfig signingConfigs.config
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "uk.co.yahoo.p1rpp.showsensors"
+        minSdk 24
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.4.0'
+}

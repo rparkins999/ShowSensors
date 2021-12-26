@@ -1,0 +1,41 @@
+<resources>
+    <string name="altitude">" metres altitude"</string>
+    <string name="angle">" (degrees)"</string>
+    <string name="app_name">Show Sensors</string>
+    <string name="degrees">degrees</string>
+    <string-array name="detected">
+        <item>"detected="</item>
+    </string-array>
+    <string name="heartbeat">" (confidence 0–1)"</string>
+    <string name="heartrate">" (beats/minute)"</string>
+    <string name="lux">" (lux)"</string>
+    <string name="magnetic">" (micro-Tesla)"</string>
+    <string name="millibar">" (millibar)"</string>
+    <string name="ms2">" (meters/second/second)"</string>
+    <string name="nomessages">no messages yet</string>
+    <string name="nosensormanager"> Cannot get Sensor Manager</string>
+    <string name="notdetected">%1$s: detected=0.0</string>
+    <string name="onoffbody">" (on-body => 1, off-body => 0)"</string>
+    <string-array name="orientation">
+        <item>"Azimuth="</item>
+        <item>", Pitch="</item>
+        <item>", roll="</item>
+    </string-array>
+    <string name="permissiondenied">Permission denied</string>
+    <string name="radians">" (radians about)"</string>
+    <string-array name="rotation">
+        <item>"East sin(θ/2)="</item>
+        <item>", North sin(θ/2)="</item>
+        <item>", Up sin(θ/2)="</item>
+        <item>", cos(θ/2)="</item>
+        <item>", accuracy (radians)="</item>
+    </string-array>
+    <string name="rps">" (radians/second about)"</string>
+    <string name="steps">" (steps)"</string>
+    <string name="units">"%1$s %2$s: "</string>
+    <string-array name="xyz">
+        <item>"x="</item>
+        <item>", y="</item>
+        <item>", z="</item>
+    </string-array>
+</resources>
