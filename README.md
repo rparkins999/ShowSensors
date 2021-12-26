@@ -9,7 +9,7 @@ ShowSensors is open source, free, and does not display adverts or pester you for
 
 The output on the screen looks like this:-
 
-<img src="./assets/Screenshot.png
+<img src="./assets/Screenshot.png"
      alt="Screenshot"
      height=600em>
 
